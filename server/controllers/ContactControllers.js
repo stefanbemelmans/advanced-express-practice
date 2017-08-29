@@ -7,7 +7,8 @@ export function show(request, response) {
   return response.json({theId: request.params.theId});
 }
 export function create(request, response) {
-  return response.json({});
+  contacts.push(response.body);
+  return response.json(response.body);
 }
 export function update(request, response) {
   return response.json({theId: request.params.theId});
