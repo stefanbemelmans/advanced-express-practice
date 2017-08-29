@@ -1,9 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
-import comments from "./comments";
+
 import products from "./products";
 import vehicle from "./vehicles";
-import contacts from "./contacts";
+
 import ContactRoutes from "./routes/ContactRoutes";
 import CommentRoutes from "./routes/CommentRoutes";
 const app = express();
