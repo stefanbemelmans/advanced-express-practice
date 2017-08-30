@@ -1,16 +1,18 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-import products from "./products";
-import vehicle from "./vehicles";
-
 import ContactRoutes from "./routes/ContactRoutes";
 import CommentRoutes from "./routes/CommentRoutes";
+import VehicleRoutes from "./routes/VehicleRoutes";
+import ProductRoutes from "./routes/ProductRoutes";
+
 const app = express();
 app.use(bodyParser.json());
 // app.use(express.methodOverride());
 app.use(ContactRoutes);
 app.use(CommentRoutes);
+app.use(VehicleRoutes);
+app.use(ProductRoutes);
 
 
 app.get("/", function (request, response){
