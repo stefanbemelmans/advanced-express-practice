@@ -7,6 +7,7 @@ export function show(request, response) {
   return response.json({theId: request.params.theId});
 }
 export function create(request, response) {
+  console.log(request);
   comments.push(request.body);
   
   return response.json({body: request.body});
