@@ -9,7 +9,6 @@ export function show(request, response) {
 export function create(request, response) {
   contacts.push(request.body);
   const name = request.body.name;
-  
   const occupation = request.body.occupation;
   const avatar = request.body.avatar;
   
