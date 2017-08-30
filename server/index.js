@@ -8,6 +8,7 @@ import ContactRoutes from "./routes/ContactRoutes";
 import CommentRoutes from "./routes/CommentRoutes";
 const app = express();
 app.use(bodyParser.json());
+// app.use(express.methodOverride());
 app.use(ContactRoutes);
 app.use(CommentRoutes);
 
