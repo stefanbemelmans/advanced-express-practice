@@ -1,16 +1,23 @@
-import comments from "../comments";
+import CommentModel from "../models/commentModel";
 
 export function list(request, response) {
-  return response.json(comments);
-}
+  CommentModel.find({}).exec().then(
+      comments => {
+        return response.json(comments);
+      }
+    );
+  }
+
 export function show(request, response) {
   return response.json({theId: request.params.theId});
 }
 export function create(request, response) {
-  console.log(request);
-  comments.push(request.body);
+  const comment = new CommentModel({
+    body: request.body
+  });
+  comment.save()
+  .then(() => {return response.json(comment);});
   
-  return response.json({body: request.body});
 }
 export function update(request, response) {
   return response.json({theId: request.params.theId});

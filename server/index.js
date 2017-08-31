@@ -6,6 +6,11 @@ import CommentRoutes from "./routes/CommentRoutes";
 import VehicleRoutes from "./routes/VehicleRoutes";
 import ProductRoutes from "./routes/ProductRoutes";
 
+import mongoose from "mongoose";
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost/test");
+
+
 const app = express();
 app.use(bodyParser.json());
 // app.use(express.methodOverride());
@@ -15,7 +20,7 @@ app.use(VehicleRoutes);
 app.use(ProductRoutes);
 
 
-app.get("/", function (request, response){
+app.get("/", function (request, response) {
   return response.json({hello: "world"});
 });
 
