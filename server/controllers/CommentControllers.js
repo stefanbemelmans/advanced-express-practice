@@ -15,12 +15,11 @@ export function create(request, response) {
   const comment = new CommentModel({
     body: request.body
   });
-  comment.save(err => {
-    if (err) { return (err); }     
-  })
-  .then(err => {
-    if (err) {return err;}
+  comment.save()
+   .then(comment => {
+
     return response.json(comment);
+ } 
   });
  
   
