@@ -18,7 +18,7 @@ export function create(request, response) {
     avatar
   });
 }
-}
+
 export function update(request, response) {
   return response.json({theId: request.params.theId});
 }

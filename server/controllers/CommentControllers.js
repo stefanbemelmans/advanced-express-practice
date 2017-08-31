@@ -16,7 +16,7 @@ export function create(request, response) {
     body: request.body
   });
   comment.save()
-  .then(() => {return response.json(comment);});
+  .then(comment => {return response.json(comment);});
   
 }
 export function update(request, response) {
