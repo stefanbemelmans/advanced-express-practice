@@ -6,7 +6,7 @@ export function list(request, response) {
         return response.json(comments);
       }
     );
-  }
+}
 
 export function show(request, response) {
   return response.json({theId: request.params.theId});
@@ -15,8 +15,14 @@ export function create(request, response) {
   const comment = new CommentModel({
     body: request.body
   });
-  comment.save()
-  .then(() => {return response.json(comment);});
+  comment.save(function (err) {
+    if (err) { return (err); }     
+  })
+  .then((err) => {
+    if (err) {return err;}
+    return response.json(comment);
+  });
+ 
   
 }
 export function update(request, response) {

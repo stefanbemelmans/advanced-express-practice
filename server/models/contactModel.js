@@ -24,7 +24,7 @@ const schema = new mongoose.Schema({
   avatar: {
     required: true,
     type: String
-  },
+  }
 });
 
 export default mongoose.model("Contact", schema);
