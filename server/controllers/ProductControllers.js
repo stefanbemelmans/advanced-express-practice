@@ -7,11 +7,17 @@ export function show(request, response) {
   return response.json({theId: request.params.theId});
 }
 export function create(request, response) {
-  products.push(request.body);
+  contacts.push(request.body);
+  const name = request.body.name;
+  const occupation = request.body.occupation;
+  const avatar = request.body.avatar;
+  
   return response.json({
-    name: request.body.name,
-    description: request.body.description
+    name,
+    occupation,
+    avatar
   });
+}
 }
 export function update(request, response) {
   return response.json({theId: request.params.theId});
