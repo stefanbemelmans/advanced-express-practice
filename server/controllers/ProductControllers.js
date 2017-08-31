@@ -7,7 +7,7 @@ export function show(request, response) {
   return response.json({theId: request.params.theId});
 }
 export function create(request, response) {
-  contacts.push(request.body);
+  // .push(request.body);
   const name = request.body.name;
   const occupation = request.body.occupation;
   const avatar = request.body.avatar;
@@ -18,7 +18,7 @@ export function create(request, response) {
     avatar
   });
 }
-}
+
 export function update(request, response) {
   return response.json({theId: request.params.theId});
 }
