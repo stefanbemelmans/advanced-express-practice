@@ -21,8 +21,8 @@ export function create(request, response) {
     // phone: request.body.phone
   });
   contact.save()
-  .then(contact => { 
-    return response.json(contact);
+  .then(newContact => { 
+    return response.json(newContact);
   });
   
   
