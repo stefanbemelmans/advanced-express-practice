@@ -12,12 +12,6 @@ export function show(request, response) {
   return response.json({theId: request.params.theId});
 }
 export function create(request, response) {
-<<<<<<< HEAD
-  contacts.push(request.body);
-  const name = request.body.name;
-  const occupation = request.body.occupation;
-  const avatar = request.body.avatar;
-=======
   const contact = new ContactModel({
     firstName: request.body.firstName,
     // lastName: request.body.lastName,
@@ -31,7 +25,6 @@ export function create(request, response) {
     return response.json(contact);
   });
   
->>>>>>> origin/master
   
 }
 export function update(request, response) {
