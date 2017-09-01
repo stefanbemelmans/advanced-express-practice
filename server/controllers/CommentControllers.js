@@ -11,6 +11,7 @@ export function list(request, response) {
 export function show(request, response) {
   return response.json({theId: request.params.theId});
 }
+// .body is the whole thing. (thanks Jon!)
 export function create(request, response) {
   const comment = new CommentModel({
     body: request.body.body
