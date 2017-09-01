@@ -14,16 +14,14 @@ export function show(request, response) {
 export function create(request, response) {
   const contact = new ContactModel({
     name: request.body.name,
-    // lastName: request.body.lastName,
     occupation: request.body.occupation,
     avatar: request.body.avatar,
-    // address: request.body.address,
-    // phone: request.body.phone
   });
   contact.save()
-  .then(contact => { 
-    return response.json(contact);
-  });
+    .then(contact => { 
+      return response.json(contact);
+    });
+    
   
   
 }

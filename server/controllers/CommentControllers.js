@@ -2,10 +2,10 @@ import CommentModel from "../models/commentModel";
 
 export function list(request, response) {
   CommentModel.find({}).exec().then(
-      comments => {
-        return response.json(comments);
-      }
-    );
+    comments => {
+      return response.json(comments);
+    }
+  );
 }
 
 export function show(request, response) {
@@ -16,11 +16,11 @@ export function create(request, response) {
     body: request.body.body
   });
   comment.save()
-   .then(comment => {
+    .then(comment => {
 
-    return response.json(comment);
+      return response.json(comment);
  
-  });
+    });
  
   
 }
