@@ -16,7 +16,16 @@ export function create(request, response) {
     body: request
   });
   comment.save()
+<<<<<<< HEAD
   .then(comment => response.json(comment));
+=======
+   .then(comment => {
+
+    return response.json(comment);
+ } 
+  });
+ 
+>>>>>>> origin/master
   
 }
 export function update(request, response) {
