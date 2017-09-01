@@ -13,7 +13,7 @@ export function show(request, response) {
 }
 export function create(request, response) {
   const contact = new ContactModel({
-    firstName: request.body.firstName,
+    name: request.body.name,
     // lastName: request.body.lastName,
     occupation: request.body.occupation,
     avatar: request.body.avatar,
@@ -21,8 +21,8 @@ export function create(request, response) {
     // phone: request.body.phone
   });
   contact.save()
-  .then(newContact => { 
-    return response.json(newContact);
+  .then(contact => { 
+    return response.json(contact);
   });
   
   

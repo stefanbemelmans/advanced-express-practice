@@ -13,19 +13,15 @@ export function show(request, response) {
 }
 export function create(request, response) {
   const comment = new CommentModel({
-    body: request
+    body: request.body.body
   });
   comment.save()
-<<<<<<< HEAD
-  .then(comment => response.json(comment));
-=======
    .then(comment => {
 
     return response.json(comment);
- } 
+ 
   });
  
->>>>>>> origin/master
   
 }
 export function update(request, response) {
