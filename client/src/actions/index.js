@@ -1,11 +1,11 @@
 export function loadContacts() {
   return function (dispatch) {
     fetch("/contacts")
-    .then( (response) => {
-      return response.json();
-    }).then((contacts) => {
-      dispatch(contactsLoaded(contacts));
-    });
+      .then( (response) => {
+        return response.json();
+      }).then((contacts) => {
+        dispatch(contactsLoaded(contacts));
+      });
   };
 }
 function contactsLoaded(contacts) {
@@ -14,15 +14,32 @@ function contactsLoaded(contacts) {
     value: contacts
   };
 }
+export function getContact(id) {
+  return function (dispatch) {
+    fetch("/contacts/" + id)
+      .then( (response) => {
+        return response.json();
+      }).then((contact) => {
+        dispatch(getContactDone(contact));
+      });
+  };
+}
+function getContactDone(contact) {
+  return {
+    type: "GET_CONTACT_DONE",
+    value: contact
+  };
+}
+
 
 export function loadVehicles() {
   return function (dispatch) {
     fetch("/vehicles")
-    .then( (response) => {
-      return response.json();
-    }).then((vehicles) => {
-      dispatch(vehiclesLoaded(vehicles));
-    });
+      .then( (response) => {
+        return response.json();
+      }).then((vehicles) => {
+        dispatch(vehiclesLoaded(vehicles));
+      });
   };
 }
 function vehiclesLoaded(vehicles) {
@@ -31,14 +48,32 @@ function vehiclesLoaded(vehicles) {
     value: vehicles
   };
 }
+export function getVehicle(id) {
+  return function (dispatch) {
+    fetch("/vehicles/" + id)
+      .then( (response) => {
+        return response.json();
+      }).then((vehicle) => {
+        dispatch(getVehicleDone(vehicle));
+      });
+  };
+}
+function getVehicleDone(vehicle) {
+  return {
+    type: "GET_VEHICLE_DONE",
+    value: vehicle
+  };
+}
+
+
 export function loadComments() {
   return function (dispatch) {
     fetch("/comments")
-    .then( (response) => {
-      return response.json();
-    }).then((comments) => {
-      dispatch(commentsLoaded(comments));
-    });
+      .then( (response) => {
+        return response.json();
+      }).then((comments) => {
+        dispatch(commentsLoaded(comments));
+      });
   };
 }
 function commentsLoaded(comments) {
@@ -47,14 +82,32 @@ function commentsLoaded(comments) {
     value: comments
   };
 }
+export function getComment(id) {
+  return function (dispatch) {
+    fetch("/comments/" + id)
+      .then( (response) => {
+        return response.json();
+      }).then((comment) => {
+        dispatch(getCommentDone(comment));
+      });
+  };
+}
+function getCommentDone(comment) {
+  return {
+    type: "GET_COMMENT_DONE",
+    value: comment
+  };
+}
+
+
 export function loadProducts() {
   return function (dispatch) {
     fetch("/products")
-    .then( (response) => {
-      return response.json();
-    }).then((products) => {
-      dispatch(productsLoaded(products));
-    });
+      .then( (response) => {
+        return response.json();
+      }).then((products) => {
+        dispatch(productsLoaded(products));
+      });
   };
 }
 function productsLoaded(products) {
@@ -63,6 +116,24 @@ function productsLoaded(products) {
     value: products
   };
 }
+export function getProduct(id) {
+  return function (dispatch) {
+    fetch("/products/" + id)
+      .then( (response) => {
+        return response.json();
+      }).then((product) => {
+        dispatch(getProductDone(product));
+      });
+  };
+}
+function getProductDone(product) {
+  return {
+    type: "GET_PRODUCT_DONE",
+    value: product
+  };
+}
+
+
 export function createProduct(product) {
   return function (dispatch) {
     fetch("/products", {
