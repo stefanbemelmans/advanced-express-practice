@@ -11,7 +11,8 @@ mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/test",
   {
     useMongoClient: true
-  });
+  }
+);
 
 
 const app = express();
@@ -23,15 +24,15 @@ app.use(VehicleRoutes);
 app.use(ProductRoutes);
 
 
-app.get("/", function (request, response) {
-  return response.json({hello: "world"});
-});
+// app.get("/", function (request, response) {
+//   return response.json({hello: "world"});
+// });
 
 const port = process.env.PORT || 3001;
 
-app.post("/",function (request, response) {
-  return response.json({hello: "post world"});
-});
+// app.post("/",function (request, response) {
+//   return response.json({hello: "post world"});
+// });
 
 app.listen(port, () => {
   console.log(`Listening on port:${port}`);

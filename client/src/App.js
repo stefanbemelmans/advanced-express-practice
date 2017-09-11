@@ -28,7 +28,7 @@ class App extends Component {
             <Main />
           </div>
           <Switch>
-            <Route path="/comments/:theId" component={CommentDetail} />
+            <Route path="/comments/:id" component={CommentDetail} />
             {/* <Route path="/comments/:theId" component={CommentDetail} />
             <Route path="/comments/:theId" component={CommentDetail} />
             <Route path="/comments/:theId" component={CommentDetail} />

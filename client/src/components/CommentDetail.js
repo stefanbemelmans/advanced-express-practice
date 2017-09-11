@@ -10,7 +10,11 @@ export default class CommentDetail extends Component {
   }
   componentDidMount() {
     const userId = this.props.match.params.id;
+<<<<<<< HEAD
    getComment(userId);
+=======
+    this.props.comment = getComment(userId);
+>>>>>>> 8c2ba3bed7ee9395b8216eba7afbf151f161ad89
 
   }
   
@@ -18,7 +22,7 @@ export default class CommentDetail extends Component {
     const comment = this.props.comment.body;
     return (
       <div className="comment">
-        {comment}
+      <h3>{comment}</h3>
       </div>
     );
   }
