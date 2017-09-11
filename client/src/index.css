@@ -6,6 +6,7 @@ body {
 
 div {
   display: flex;
+  flex-direction: column;
 }
 .comment {
   height: 25rem;
