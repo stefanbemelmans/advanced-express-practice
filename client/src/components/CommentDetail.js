@@ -18,7 +18,7 @@ export default class CommentDetail extends Component {
     const comment = this.props.comment.body;
     return (
       <div className="comment">
-        {comment}
+      <h3>{comment}</h3>
       </div>
     );
   }
