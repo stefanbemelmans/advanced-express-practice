@@ -9,7 +9,7 @@ export function list(request, response) {
 }
 
 export function show(request, response) {
-  return response.json({theId: request.params.theId});
+  return response.json({id: request.params.id});
 }
 // .body is the whole thing. (thanks Jon!)
 export function create(request, response) {
