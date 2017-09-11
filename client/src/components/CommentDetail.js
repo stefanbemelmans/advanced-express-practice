@@ -10,7 +10,7 @@ export default class CommentDetail extends Component {
   }
   componentDidMount() {
     const userId = this.props.match.params.id;
-    this.props.comment = getComment(userId);
+    getComment(userId);
 
   }
   
