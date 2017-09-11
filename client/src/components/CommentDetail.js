@@ -1,22 +1,27 @@
 import React, {Component} from "react";
+import {getComment} from "../actions";
 
 export default class CommentDetail extends Component {
   constructor(props) {
     super(props);
+    // this.state = {
+    //   comment: ""
+    // };
   }
-componentDidMount(){
-  let id = this.props.comment.id;
-  this.props.getComment(id);
-}
+  componentDidMount() {
+    const userId = this.props.match.params.id;
+    getComment(userId);
 
-render(){
-  let comment = this.props.comment.body;
-  return(
-
-    {comment}
-
-  );
-}
+  }
+  
+  render() {
+    const comment = this.props.comment.body;
+    return (
+      <div className="comment">
+        {comment}
+      </div>
+    );
+  }
 
 
 }

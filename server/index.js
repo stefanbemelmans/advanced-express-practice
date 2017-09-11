@@ -8,10 +8,10 @@ import ProductRoutes from "./routes/ProductRoutes";
 
 import mongoose from "mongoose";
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/test"
-, {
-  useMongoClient: true
-});
+mongoose.connect("mongodb://localhost/test",
+  {
+    useMongoClient: true
+  });
 
 
 const app = express();
