@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {getComment} from "../actions";
+
 
 export default class CommentDetail extends Component {
   constructor(props) {
@@ -10,15 +10,19 @@ export default class CommentDetail extends Component {
   }
   componentDidMount() {
     const userId = this.props.match.params.id;
-    this.props.comment = getComment(userId);
+    this.props.getComment(userId);
+    console.log(this.props);
+ 
 
   }
   
   render() {
-    const comment = this.props.comment.body;
+    const comment = this.props.comment;
+    
     return (
       <div className="comment">
-      <h3>{comment}</h3>
+
+        <h3>{comment}</h3>
       </div>
     );
   }
