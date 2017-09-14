@@ -23,7 +23,7 @@ export default class CommentDetail extends Component {
     return (
       <div className="comment">
 
-        <h3>{comment.body}</h3>
+        <h3>{comment}</h3>
       </div>
     );
   }

@@ -9,7 +9,7 @@ export function list(request, response) {
 }
 
 export function show(request, response) {
-  CommentModel.find({id: request.params.id}).exec().then(
+  CommentModel.findById(request.params.id).exec().then(
     comment => {
       return response.json(comment);
     });
