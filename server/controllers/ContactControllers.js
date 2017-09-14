@@ -9,7 +9,7 @@ export function list(request, response) {
   );
 }
 export function show(request, response) {
-  return response.json({theId: request.params.theId});
+  return response.json({id: request.params.id});
 }
 export function create(request, response) {
   const contact = new ContactModel({
