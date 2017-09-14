@@ -7,7 +7,7 @@ function comments(state = [], action) {
   return state;
 }
 
-function getCommentDone(state = [], action) {
+function getCommentDone(state = {}, action) {
   if (action.type === "GET_COMMENT_DONE") {
     return action.value;
   }

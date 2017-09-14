@@ -6,7 +6,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-import CommentDetail from "./components/CommentDetail";
+
+import CommentDetailContainer from "./containers/CommentDetailContainer";
 // import Main from "./components/Main";
 // import CommentDetail from "./components/CommentDetail";
 class App extends Component {
@@ -22,24 +23,28 @@ class App extends Component {
   }
   render() {
     return (
+     
       <BrowserRouter>
         <div>
-          <div>
-            <Main />
-          </div>
+          <Main />
           <Switch>
+<<<<<<< HEAD
             <Route path="/comment/:id" component={CommentDetail} />
+=======
+            <Route path="/comment/:id" component={CommentDetailContainer} />
+>>>>>>> origin/master
             {/* <Route path="/comments/:theId" component={CommentDetail} />
-            <Route path="/comments/:theId" component={CommentDetail} />
-            <Route path="/comments/:theId" component={CommentDetail} />
-            <Route path="/comments/:theId" component={CommentDetail} />
-          */}
-            <Route path="/" component={Main} />
-          
-          
+        <Route path="/comments/:theId" component={CommentDetail} />
+        <Route path="/comments/:theId" component={CommentDetail} />
+        <Route path="/comments/:theId" component={CommentDetail} />
+      */}
+            {/* <Route path="/" component={Main} /> */}
           </Switch>
         </div>
       </BrowserRouter>
+      
+      
+      
     );
   }
 }
