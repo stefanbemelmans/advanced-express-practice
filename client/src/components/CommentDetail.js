@@ -10,13 +10,9 @@ export default class CommentDetail extends Component {
   }
   componentDidMount() {
     const userId = this.props.match.params.id;
-<<<<<<< HEAD
-    getComment(userId);
-=======
     this.props.getComment(userId);
     console.log(this.props);
  
->>>>>>> origin/master
 
   }
   
