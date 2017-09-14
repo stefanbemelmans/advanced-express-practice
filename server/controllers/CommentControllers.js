@@ -9,7 +9,10 @@ export function list(request, response) {
 }
 
 export function show(request, response) {
-  return response.json({id: request.params.id});
+  CommentModel.find({id: request.params.id}).exec().then(
+    comment => {
+      return response.json(comment);
+    });
 }
 // .body is the whole thing. (thanks Jon!)
 export function create(request, response) {
