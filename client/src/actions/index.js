@@ -86,10 +86,12 @@ export function getComment(id) {
   return function (dispatch) {
     fetch("/comments/" + id)
       .then( (response) => {
-        console.log(response);
+       
         return response.json();
       }).then((comment) => {
+        
         dispatch(getCommentDone(comment));
+        console.log(comment);
       });
   };
 }
