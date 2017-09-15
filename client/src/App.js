@@ -34,7 +34,7 @@ class App extends Component {
         <Route path="/comments/:theId" component={CommentDetail} />
         <Route path="/comments/:theId" component={CommentDetail} />
       */}
-            {/* <Route path="/" component={Main} /> */}
+            <Route exact path="/" component={Main} />
           </Switch>
         </div>
       </BrowserRouter>
