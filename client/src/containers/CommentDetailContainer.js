@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
 import Comment from "../components/CommentDetail";
 import {getComment} from "../actions";
-
+import {getCommentDone} from "../actions";
 function mapStateToProps(state) {
   return {
-    comment: state.comment
+    comment: state.getCommentDone
   };
 }
 

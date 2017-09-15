@@ -18,7 +18,8 @@ export default class CommentDetail extends Component {
   
   render() {
     console.log(this.props);
-    const comment = this.props.comment;
+    const comment = this.props.comment.body;
+
     
     return (
       <div className="comment">
