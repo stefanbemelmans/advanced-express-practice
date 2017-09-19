@@ -22,7 +22,7 @@ function Contacts() {
         </div>
         <div style={{float: "left", width: "49%"}}>
           <CreateThingsContainer />
-        </div>S
+        </div>
       
         
       </div>

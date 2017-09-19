@@ -26,7 +26,7 @@ class App extends Component {
      
       <BrowserRouter>
         <div>
-          <Main />
+          {/* <Main /> */}
           <Switch>
             <Route path="/comment/:id" component={CommentDetailContainer} />
             {/* <Route path="/comments/:theId" component={CommentDetail} />
